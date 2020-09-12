@@ -1,7 +1,8 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
+import * as exampleController from '../controllers/example';
 
 const router = Router();
 
-router.get('/', (req: Request, res: Response) => res.json({ message: 'hi' }));
+router.get('/', exampleController.index);
 
 export { router };
