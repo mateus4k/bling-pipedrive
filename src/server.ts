@@ -1,3 +1,6 @@
 import { app } from './app';
+import config from './config/app';
 
-app.listen(process.env.PORT || 3333);
+app.listen(config.port, () => {
+  console.log(`🚀 App is running at http://localhost:${config.port}`);
+});
