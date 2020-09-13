@@ -4,11 +4,11 @@
   "scripts": {
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
-    "build:watch": "tsc -w -p tsconfig.release.json",
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "lint": "eslint . --ext .ts",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:watch": "yarn test -- --watchAll --silent",
+    "test:staged": "yarn test -- --findRelatedTests --silent"
   },
   "dependencies": {
     "express": "^4.17.1"
