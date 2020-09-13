@@ -7,8 +7,9 @@
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "lint": "eslint . --ext .ts",
     "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
-    "test:watch": "yarn test -- --watchAll --silent",
-    "test:staged": "yarn test -- --findRelatedTests --silent"
+    "test:watch": "yarn test --watchAll --silent",
+    "test:staged": "yarn test --findRelatedTests --silent",
+    "test:ci": "yarn test --coverage --silent"
   },
   "dependencies": {
     "express": "^4.17.1"
@@ -22,11 +23,19 @@
     "eslint": "~7.7.0",
     "eslint-config-prettier": "~6.11.0",
     "eslint-plugin-jest": "~23.20.0",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
+    "lint-staged": "^10.3.0",
     "prettier": "~2.0.5",
+    "standard": "^14.3.4",
     "supertest": "^4.0.2",
     "ts-jest": "^26.3.0",
     "ts-node-dev": "^1.0.0-pre.62",
     "typescript": "^4.0.2"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }
