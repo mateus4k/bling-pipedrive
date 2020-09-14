@@ -1,4 +1,4 @@
-import ExampleController from '../../controllers/example/index';
+import { ExampleController } from '../../controllers/example/index';
 import { getMessage } from '../../services/example/getMessage';
 
 export class ExampleControllerComposer {

@@ -4,7 +4,7 @@ import { HttpResponse } from '../../helpers/http';
 import { ControllerInterface } from '../controller-interface';
 import { IResponse } from '../../helpers/http';
 
-class ExampleController implements ControllerInterface {
+export class ExampleController implements ControllerInterface {
   constructor(private service: ServiceInterface) {}
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -17,5 +17,3 @@ class ExampleController implements ControllerInterface {
     }
   }
 }
-
-export default ExampleController;
