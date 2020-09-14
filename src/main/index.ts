@@ -1,5 +1,4 @@
-import { app } from './config/app';
-import env from './config/env';
+import { app, env } from './config';
 
 app.listen(env.port, () => {
   console.log(`🚀 App is running at http://localhost:${env.port}`);
