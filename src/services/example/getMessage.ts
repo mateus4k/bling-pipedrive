@@ -2,7 +2,7 @@ import {
   Example as ExampleRepository,
   IExample,
 } from '../../repositories/example';
-import { ServiceInterface } from '../interface';
+import { ServiceInterface } from '../service-interface';
 
 export class getMessage implements ServiceInterface {
   private repository: IExample;

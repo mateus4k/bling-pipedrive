@@ -1,6 +1,6 @@
 import { UnauthorizedError, ServerError } from '../../exceptions';
 
-interface IResponse {
+export interface IResponse {
   statusCode: number;
   body: {
     error?: string;

@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import * as exampleController from '../controllers/example';
+import { ExpressRouterAdapter } from '../main/adapters/express-router';
+import { ExampleControllerComposer } from '../main/composers/example-router';
 
 const router = Router();
+const adapter = ExpressRouterAdapter.adapt;
 
-router.get('/', exampleController.index);
+router.get('/', adapter(ExampleControllerComposer.compose()));
 
 export { router };
