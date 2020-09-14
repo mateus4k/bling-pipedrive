@@ -1,11 +1,11 @@
 import { GetMessageRouter } from '../../presentation/routers/example/get-message';
-import { getMessage } from '../../domain/usecases/example';
+import { GetMessageUseCase } from '../../domain/usecases/example';
 import { ExampleRepository } from '../../infra/repositories/example-repository';
 
-export class ExampleControllerComposer {
+export class ExampleRouterComposer {
   static compose() {
     const getMessageRepository = new ExampleRepository();
-    const getMessageService = new getMessage(getMessageRepository);
-    return new GetMessageRouter(getMessageService);
+    const getMessageUseCase = new GetMessageUseCase(getMessageRepository);
+    return new GetMessageRouter(getMessageUseCase);
   }
 }

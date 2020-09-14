@@ -1,6 +1,6 @@
 import { IGetMessage } from '../../../infra/repositories/interfaces';
 
-export class getMessage {
+export class GetMessageUseCase {
   constructor(private getMessageRepository: IGetMessage) {}
 
   run(): string {
