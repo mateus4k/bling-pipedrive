@@ -1,5 +1,5 @@
 import * as supertest from 'supertest';
-import { app } from '../../src/app';
+import { app } from '../../../src/main/config';
 
 let request;
 
