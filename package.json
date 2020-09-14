@@ -7,8 +7,10 @@
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/main",
     "lint": "eslint . --ext .ts",
     "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:unit": "yarn test --watch -c jest-unit-config.js",
+    "test:integration": "yarn test --watch -c jest-integration-config.js",
     "test:watch": "yarn test --watchAll --silent",
-    "test:staged": "yarn test --findRelatedTests --silent",
+    "test:staged": "yarn test --findRelatedTests . --silent",
     "test:ci": "yarn test --coverage --silent"
   },
   "dependencies": {
