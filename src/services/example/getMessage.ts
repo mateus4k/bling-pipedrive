@@ -1,17 +1,10 @@
-import {
-  Example as ExampleRepository,
-  IExample,
-} from '../../repositories/example';
 import { ServiceInterface } from '../service-interface';
+import { IGetMessage } from '../../infra/repositories/interfaces';
 
 export class getMessage implements ServiceInterface {
-  private repository: IExample;
-
-  constructor() {
-    this.repository = new ExampleRepository();
-  }
+  constructor(private getMessageRepository: IGetMessage) {}
 
   run(): string {
-    return this.repository.getMessage();
+    return this.getMessageRepository.getMessage();
   }
 }
