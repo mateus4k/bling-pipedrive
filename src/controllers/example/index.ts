@@ -7,8 +7,7 @@ import { IResponse } from '../../helpers/http';
 export class ExampleController implements ControllerInterface {
   constructor(private service: ServiceInterface) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async route(httpRequest): Promise<IResponse> {
+  async route(): Promise<IResponse> {
     try {
       const message = this.service.run();
       return HttpResponse.ok({ message });
