@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
-    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/main",
     "lint": "eslint . --ext .ts",
     "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
     "test:watch": "yarn test --watchAll --silent",
