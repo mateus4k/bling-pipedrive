@@ -1,4 +1,4 @@
-import { UnauthorizedError, ServerError } from '../../presentation/exceptions';
+import { UnauthorizedError, ServerError } from '../exceptions';
 
 export interface ResponseInterface {
   statusCode: number;

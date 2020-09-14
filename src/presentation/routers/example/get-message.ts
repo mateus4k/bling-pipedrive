@@ -1,6 +1,6 @@
 import { UseCaseInterface } from '../../../domain/usecases/interface';
 import { RouterInterface } from '../interface';
-import { HttpResponse, ResponseInterface } from '../../../helpers/http';
+import { HttpResponse, ResponseInterface } from '../../helpers';
 
 export class GetMessageRouter implements RouterInterface {
   constructor(private GetMessageUseCase: UseCaseInterface) {}
