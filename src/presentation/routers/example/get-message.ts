@@ -3,11 +3,11 @@ import { RouterInterface } from '../interface';
 import { HttpResponse, ResponseInterface } from '../../../helpers/http';
 
 export class GetMessageRouter implements RouterInterface {
-  constructor(private service: UseCaseInterface) {}
+  constructor(private GetMessageUseCase: UseCaseInterface) {}
 
   async route(): Promise<ResponseInterface> {
     try {
-      const message = this.service.run();
+      const message = this.GetMessageUseCase.run();
       return HttpResponse.ok({ message });
     } catch (error) {
       return HttpResponse.serverError();
