@@ -1,3 +1,3 @@
-export interface IGetMessage {
+export interface GetMessageInterface {
   getMessage(): string;
 }

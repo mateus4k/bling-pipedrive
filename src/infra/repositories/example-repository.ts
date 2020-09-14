@@ -1,6 +1,6 @@
-import { IGetMessage } from './interfaces';
+import { GetMessageInterface } from './interfaces';
 
-export class ExampleRepository implements IGetMessage {
+export class ExampleRepository implements GetMessageInterface {
   getMessage(): string {
     return 'hi';
   }
