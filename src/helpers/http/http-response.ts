@@ -1,6 +1,6 @@
-import { UnauthorizedError, ServerError } from '../../exceptions';
+import { UnauthorizedError, ServerError } from '../../presentation/exceptions';
 
-export interface IResponse {
+export interface ResponseInterface {
   statusCode: number;
   body: {
     error?: string;
@@ -8,14 +8,14 @@ export interface IResponse {
 }
 
 class HttpResponse {
-  static ok(body: unknown): IResponse {
+  static ok(body: unknown): ResponseInterface {
     return {
       statusCode: 200,
       body,
     };
   }
 
-  static badRequest(error: Error): IResponse {
+  static badRequest(error: Error): ResponseInterface {
     return {
       statusCode: 400,
       body: {
@@ -24,7 +24,7 @@ class HttpResponse {
     };
   }
 
-  static unauthorizedError(): IResponse {
+  static unauthorizedError(): ResponseInterface {
     return {
       statusCode: 401,
       body: {
@@ -33,7 +33,7 @@ class HttpResponse {
     };
   }
 
-  static serverError(): IResponse {
+  static serverError(): ResponseInterface {
     return {
       statusCode: 500,
       body: {
@@ -43,4 +43,4 @@ class HttpResponse {
   }
 }
 
-export default HttpResponse;
+export { HttpResponse };
