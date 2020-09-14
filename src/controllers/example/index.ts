@@ -1,5 +1,4 @@
-// import { Response, Request } from 'express';
-import { ServiceInterface } from '../../services/service-interface';
+import { ServiceInterface } from '../../infra/services/service-interface';
 import { HttpResponse } from '../../helpers/http';
 import { ControllerInterface } from '../controller-interface';
 import { IResponse } from '../../helpers/http';

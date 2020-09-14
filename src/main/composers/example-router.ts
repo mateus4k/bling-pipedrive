@@ -1,5 +1,5 @@
 import { ExampleController } from '../../controllers/example/index';
-import { getMessage } from '../../services/example/getMessage';
+import { getMessage } from '../../infra/services/example/getMessage';
 import { ExampleRepository } from '../../infra/repositories/example-repository';
 
 export class ExampleControllerComposer {
