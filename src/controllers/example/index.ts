@@ -1,10 +1,10 @@
-import { ServiceInterface } from '../../infra/services/service-interface';
+import { UseCaseInterface } from '../../domain/usecases/interface';
 import { HttpResponse } from '../../helpers/http';
 import { ControllerInterface } from '../controller-interface';
 import { IResponse } from '../../helpers/http';
 
 export class ExampleController implements ControllerInterface {
-  constructor(private service: ServiceInterface) {}
+  constructor(private service: UseCaseInterface) {}
 
   async route(): Promise<IResponse> {
     try {
