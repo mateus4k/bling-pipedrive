@@ -9,6 +9,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.{ts,js}', '!src/**/*.d.ts'],
   coveragePathIgnorePatterns: [
     '/node_modules/',
-    '<rootDir>/src/main/index.ts'
+    '<rootDir>/src/main/index.ts',
+    'interface?(s)'
   ]
 }
