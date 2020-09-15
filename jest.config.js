@@ -7,5 +7,8 @@ module.exports = {
   testMatch: ['**/__tests__/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
   coverageDirectory: 'coverage',
   collectCoverageFrom: ['src/**/*.{ts,js}', '!src/**/*.d.ts'],
-  coveragePathIgnorePatterns: ['/node_modules/']
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/src/main/index.ts'
+  ]
 }
