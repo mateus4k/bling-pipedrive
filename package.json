@@ -1,6 +1,9 @@
 {
-  "name": "kapi",
+  "name": "bling-pipedrive",
   "version": "1.0.0",
+  "author": "Mateus Sampaio",
+  "license": "MIT",
+  "main": "src/main/index.ts",
   "scripts": {
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
