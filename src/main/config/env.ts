@@ -4,9 +4,13 @@ config();
 
 export const env = {
   port: process.env.PORT || 3333,
-  mongo: process.env.MONGO_URL || '',
+  mongo: {
+    url: process.env.MONGO_URL || '',
+  },
   pipedrive: {
-    baseUrl: `https://${process.env.PIPEDRIVE_DOMAIN || 'companydomain'}.pipedrive.com/api/v1`,
+    baseUrl: `https://${
+      process.env.PIPEDRIVE_DOMAIN || 'companydomain'
+    }.pipedrive.com/api/v1`,
     token: process.env.PIPEDRIVE_TOKEN || '',
   },
   bling: {
