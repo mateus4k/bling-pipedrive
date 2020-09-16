@@ -6,7 +6,7 @@ export interface DealsInterface {
       start: boolean;
     };
   };
-  data?: [{ any }];
+  data?: { any }[];
   success: boolean;
 }
 
