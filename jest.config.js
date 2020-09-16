@@ -11,6 +11,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '<rootDir>/src/main/index.ts',
+    '<rootDir>/src/main/config/env.ts',
     'interface?(s)'
   ]
 }
