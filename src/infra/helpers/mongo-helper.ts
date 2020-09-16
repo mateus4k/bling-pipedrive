@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import { Collection, MongoClient } from 'mongodb';
 
 export default {
   async getDb() {
@@ -20,7 +20,7 @@ export default {
     this.db = null;
   },
 
-  async getCollection(name) {
+  async getCollection(name): Promise<Collection> {
     if (!this.client?.isConnected()) {
       await this.connect(this.uri);
     }
