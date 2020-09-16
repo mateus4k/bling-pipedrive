@@ -10,7 +10,7 @@ export const env = {
     token: process.env.PIPEDRIVE_TOKEN || '',
   },
   bling: {
-    baseUrl: 'https://bling.com.br/Api/v2/pedidos/json',
+    baseUrl: 'https://bling.com.br/Api/v2',
     token: process.env.BLING_TOKEN || '',
   },
 };
