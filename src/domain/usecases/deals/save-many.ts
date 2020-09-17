@@ -14,10 +14,11 @@ export class SaveManyDealsUseCase implements UseCaseInterface {
         creator: deal.creator_user_id,
         person: deal.person_id,
         org: deal.org_id,
+        title,
         value,
         currency,
         status,
-        title,
+        created_at: deal.expected_close_date,
       };
     });
 
