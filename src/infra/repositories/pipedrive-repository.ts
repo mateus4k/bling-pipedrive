@@ -17,6 +17,7 @@ export class PipedriveRepository implements GetDealsInterface {
     const data = await response.json();
 
     const successfullyFetched = data.success && response.status === 200;
-    return successfullyFetched ? data : false;
+
+    return successfullyFetched ? data.data : false;
   }
 }
