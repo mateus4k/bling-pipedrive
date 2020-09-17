@@ -1,3 +1,3 @@
 export interface UseCaseInterface {
-  run(): unknown;
+  run(...unknown): unknown;
 }
