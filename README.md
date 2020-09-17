@@ -8,4 +8,4 @@
 - List the data for this collection
 
 ## Coverage
-![image](https://user-images.githubusercontent.com/30202634/93416158-930d2700-f87b-11ea-9e52-a0b0e0cfd6b4.png)
+![image](https://user-images.githubusercontent.com/30202634/93416367-0f076f00-f87c-11ea-81b4-ce58dc5c880d.png)
