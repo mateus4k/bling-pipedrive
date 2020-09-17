@@ -78,7 +78,7 @@ describe('HttpResponse', () => {
     });
   });
 
-  it('should returns an server error', async () => {
+  it('should returns a server error', async () => {
     const sut = makeSut(() => HttpResponse.serverError());
 
     expect(sut).toEqual({
