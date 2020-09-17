@@ -17,7 +17,7 @@ const makeSut = () => {
 };
 
 describe('CreateOrdersBlingUseCase', () => {
-  it('should return 200', async () => {
+  it('should create orders successfully', async () => {
     const { sut } = makeSut();
     const orders = [];
     const response = await sut.run(orders);
