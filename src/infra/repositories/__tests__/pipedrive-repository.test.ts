@@ -8,10 +8,7 @@ describe('PipedriveRepository', () => {
       env.pipedrive.token,
     );
 
-    const limit = 15;
-    const response = await repository.getDeals('won', limit);
-
-    expect(response.additional_data.pagination.limit).toBe(limit);
-    expect(response.success).toBeTruthy();
+    const response = await repository.getDeals('won', 1);
+    expect(response[0].id).toBeTruthy();
   });
 });
