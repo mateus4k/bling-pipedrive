@@ -33,6 +33,15 @@ class HttpResponse {
     };
   }
 
+  static notFoundError(): ResponseInterface {
+    return {
+      statusCode: 404,
+      body: {
+        error: 'Not found',
+      },
+    };
+  }
+
   static serverError(): ResponseInterface {
     return {
       statusCode: 500,
