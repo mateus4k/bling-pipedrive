@@ -5,6 +5,7 @@ import {
   CreateOrderInterface,
   CreateManyOrdersInterface,
 } from './interfaces';
+import { InvalidParamError } from '../../utils/errors';
 
 interface Order {
   numero: number;
@@ -61,6 +62,10 @@ export class BlingRepository
   }
 
   async createManyOrders(orders: Deal[]): Promise<Order[]> {
+    if (!Array.isArray(orders)) {
+      throw new InvalidParamError('orders');
+    }
+
     const mapedOrdersToCreate = orders.map((order) => this.createOrder(order));
     return Promise.all(mapedOrdersToCreate);
   }
