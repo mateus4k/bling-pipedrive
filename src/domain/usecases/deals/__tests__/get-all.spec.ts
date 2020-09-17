@@ -12,7 +12,7 @@ const makeDealRepository = () => {
 const makeSut = () => {
   const dealRepository = makeDealRepository();
   const sut = new GetAllDealsUseCase(dealRepository);
-  return { sut, blingRepository: dealRepository };
+  return { sut, dealRepository };
 };
 
 describe('GetAllDealsUseCase', () => {
