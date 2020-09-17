@@ -5,7 +5,7 @@ export class DealsRepository {
 
   async all() {
     const model = await MongoHelper.getCollection(this.collection);
-    const response = await model.find();
+    const response = await model.find().toArray();
     return response;
   }
 
