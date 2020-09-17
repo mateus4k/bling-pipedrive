@@ -12,5 +12,10 @@
 - **[GET]** `/deals`: List the deals collection
 - **[POST]** `/deals`: Store deals providers by Pipedrive and save it on Bling and deals collection
 
+## Usage
+- Install dependencies with `yarn`
+- Copy your `env.example` to `.env` and setup your environments
+- Start the API with `yarn start` :rocket:
+
 ## Coverage
 ![image](https://user-images.githubusercontent.com/30202634/93416367-0f076f00-f87c-11ea-81b4-ce58dc5c880d.png)
