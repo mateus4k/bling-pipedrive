@@ -67,6 +67,17 @@ describe('HttpResponse', () => {
     });
   });
 
+  it('should returns a not found error', async () => {
+    const sut = makeSut(() => HttpResponse.notFoundError());
+
+    expect(sut).toEqual({
+      statusCode: 404,
+      body: {
+        error: 'Not found',
+      },
+    });
+  });
+
   it('should returns an server error', async () => {
     const sut = makeSut(() => HttpResponse.serverError());
 
