@@ -24,7 +24,6 @@ export class StoreOrdersRouter implements RouterInterface {
 
       return HttpResponse.ok({ data: deals });
     } catch (error) {
-      console.error(error);
       return HttpResponse.serverError();
     }
   }
