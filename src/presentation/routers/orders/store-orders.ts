@@ -17,10 +17,10 @@ export class StoreOrdersRouter implements RouterInterface {
         return HttpResponse.notFoundError();
       }
 
-      const createOrders = () => this.createOrdersBlingUseCase.run(deals);
-      const saveManyDeals = () => this.saveManyDealsUseCase.run(deals);
-
-      await Promise.all([createOrders, saveManyDeals]);
+      await Promise.all([
+        this.createOrdersBlingUseCase.run(deals),
+        this.saveManyDealsUseCase.run(deals),
+      ]);
 
       return HttpResponse.ok({ data: deals });
     } catch (error) {
