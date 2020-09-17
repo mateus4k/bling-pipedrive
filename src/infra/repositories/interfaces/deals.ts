@@ -93,7 +93,7 @@ export interface DealsInterface {
     pagination: {
       limit: number;
       more_items_in_collection: boolean;
-      start: boolean;
+      start: number;
     };
   };
   data?: Deal[];
