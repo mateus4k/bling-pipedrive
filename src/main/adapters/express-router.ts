@@ -1,9 +1,8 @@
-import { Request, Response } from 'express';
 import { RouterInterface } from '../../presentation/routers/interface';
 
 export class ExpressRouterAdapter {
   static adapt(router: RouterInterface) {
-    return async (req: Request, res: Response) => {
+    return async (req, res) => {
       const httpRequest = {
         body: req.body,
       };
