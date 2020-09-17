@@ -2,23 +2,13 @@ import { UnauthorizedError, ServerError } from '../../errors';
 import { InvalidParamError, MissingParamError } from '../../../utils/errors';
 import { HttpResponse } from '../http-response';
 
-const makeSut = (callback) => {
-  class Mock {
-    run() {
-      return callback();
-    }
-  }
-
-  return new Mock().run();
-};
-
 describe('HttpResponse', () => {
   it('should returns ok', () => {
     const body = {
       any: 'field',
     };
 
-    const sut = makeSut(() => HttpResponse.ok(body));
+    const sut = HttpResponse.ok(body);
 
     expect(sut).toEqual({
       statusCode: 200,
@@ -29,9 +19,7 @@ describe('HttpResponse', () => {
   it('should returns a bad request with invalid param error', () => {
     const message = 'mock';
 
-    const sut = makeSut(() =>
-      HttpResponse.badRequest(new InvalidParamError(message)),
-    );
+    const sut = HttpResponse.badRequest(new InvalidParamError(message));
 
     expect(sut).toEqual({
       statusCode: 400,
@@ -44,9 +32,7 @@ describe('HttpResponse', () => {
   it('should returns a bad request with missing param error', () => {
     const message = 'mock';
 
-    const sut = makeSut(() =>
-      HttpResponse.badRequest(new MissingParamError(message)),
-    );
+    const sut = HttpResponse.badRequest(new MissingParamError(message));
 
     expect(sut).toEqual({
       statusCode: 400,
@@ -57,7 +43,7 @@ describe('HttpResponse', () => {
   });
 
   it('should returns an unauthorized error', async () => {
-    const sut = makeSut(() => HttpResponse.unauthorizedError());
+    const sut = HttpResponse.unauthorizedError();
 
     expect(sut).toEqual({
       statusCode: 401,
@@ -68,7 +54,7 @@ describe('HttpResponse', () => {
   });
 
   it('should returns a not found error', async () => {
-    const sut = makeSut(() => HttpResponse.notFoundError());
+    const sut = HttpResponse.notFoundError();
 
     expect(sut).toEqual({
       statusCode: 404,
@@ -79,7 +65,7 @@ describe('HttpResponse', () => {
   });
 
   it('should returns a server error', async () => {
-    const sut = makeSut(() => HttpResponse.serverError());
+    const sut = HttpResponse.serverError();
 
     expect(sut).toEqual({
       statusCode: 500,
