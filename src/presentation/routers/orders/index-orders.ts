@@ -10,7 +10,6 @@ export class IndexOrdersRouter implements RouterInterface {
       const deals = await this.getAllDealsUseCase.run();
       return HttpResponse.ok({ data: deals });
     } catch (error) {
-      console.error({error});
       return HttpResponse.serverError();
     }
   }
